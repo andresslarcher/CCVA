@@ -31,6 +31,7 @@ class Administrador(models.Model):
 class DocDescargas(models.Model):
     idSocio = models.ForeignKey(Socio,on_delete=models.PROTECT)
     fecha = models.DateField()
+    imagen = models.ImageField(upload_to="descargas", null=True)
 
     def __str__(self):
         return self.usuario
